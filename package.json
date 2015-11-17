@@ -1,0 +1,36 @@
+{
+  "name": "npmo-license",
+  "version": "1.0.0",
+  "description": "manage your npm On-Site license",
+  "bin": "./bin/npmo-license.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bcoe/npmo-license.git"
+  },
+  "keywords": [
+    "license",
+    "npm",
+    "on-site",
+    "manage"
+  ],
+  "author": "Ben Coe <ben@npmjs.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcoe/npmo-license/issues"
+  },
+  "homepage": "https://github.com/bcoe/npmo-license#readme",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "inquirer": "^0.11.0",
+    "lodash": "^3.10.1",
+    "request": "^2.65.0",
+    "yargs": "^3.30.0"
+  },
+  "devDependencies": {
+    "standard": "^5.4.0"
+  }
+}
