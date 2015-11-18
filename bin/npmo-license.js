@@ -25,7 +25,7 @@ if (argv.email && argv.key) {
   license.licenseKey = argv.key.trim()
   license.validateLicense(function (err) {
     if (err) throw err
-    console.log(license.license)
+    console.log(JSON.stringify(license.license, null, 2))
   })
 } else {
   console.log('enter the license information provided in your signup email:')
