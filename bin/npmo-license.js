@@ -30,7 +30,7 @@ if (argv.email && argv.key) {
 } else {
   console.log('enter the license information provided in your signup email:')
   license.interview(function () {
-    console.log(license.license)
+    console.log(JSON.stringify(license.license, null, 2))
   })
 }
 
