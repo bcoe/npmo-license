@@ -17,7 +17,7 @@ var argv = require('yargs')
   .usage('download an up-to-date version of your npm On-Site license')
   .argv
 var License = require('../')
-var license = new License()
+var license = new License(argv)
 var chalk = require('chalk')
 
 if (argv.email && argv.key) {
