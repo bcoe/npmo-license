@@ -39,5 +39,6 @@ if (argv.email && argv.key) {
 }
 
 process.on('uncaughtException', function (err) {
-  console.log(chalk.red(err.message + '. most likely you entered an incorrect email or key.'))
+  console.error(chalk.red(err.message + '. most likely you entered an incorrect email or key.'))
+  process.exit(1)
 })
