@@ -10,6 +10,10 @@ var argv = require('yargs')
     alias: 'key',
     description: 'license key associated with On-Site license'
   })
+  .option('p', {
+    alias: 'proxy',
+    description: 'address of HTTP proxy to use if needed'
+  })
   .help('help')
   .alias('h', 'help')
   .version(require('../package.json').version, 'version')
