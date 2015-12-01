@@ -10,6 +10,10 @@ var argv = require('yargs')
     alias: 'key',
     description: 'license key associated with On-Site license'
   })
+  .option('p', {
+    alias: 'proxy',
+    description: 'address of HTTP proxy to use if needed'
+  })
   .help('help')
   .alias('h', 'help')
   .version(require('../package.json').version, 'version')
@@ -17,7 +21,7 @@ var argv = require('yargs')
   .usage('download an up-to-date version of your npm On-Site license')
   .argv
 var License = require('../')
-var license = new License()
+var license = new License(argv)
 var chalk = require('chalk')
 
 if (argv.email && argv.key) {
@@ -35,5 +39,6 @@ if (argv.email && argv.key) {
 }
 
 process.on('uncaughtException', function (err) {
-  console.log(chalk.red(err.message + '. most likely you entered an incorrect email or key.'))
+  console.error(chalk.red(err.message + '. most likely you entered an incorrect email or key.'))
+  process.exit(1)
 })
